@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff4d4d;
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Love ❤️</h1>
+        <p>Just a little something to remind you how special you are to me.</p>
+        
+        <h2>Our Favorite Memories 📸</h2>
+        <img src="your-photo-link-here" alt="Us together">
+        
+        <h2>Things I Love About You 💕</h2>
+        <ul>
+            <li>Your smile that brightens my day</li>
+            <li>Your silly jokes (even the bad ones 😂)</li>
+            <li>The way you always support me</li>
+            <li>How you make everything fun</li>
+        </ul>
+        
+        <button onclick="showMessage()">Click for a Surprise! 🎁</button>
+        <p class="hidden-message" id="hiddenMessage">Surprise! You are the best thing that ever happened to me. Love you! 😘</p>
+    </div>
+    
+    <script>
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+    </script>
+</body>
+</html>
