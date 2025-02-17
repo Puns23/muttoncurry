@@ -40,6 +40,11 @@
             font-size: 16px;
             margin-top: 15px;
         }
+        .rose {
+            display: none;
+            margin-top: 20px;
+            width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -48,7 +53,7 @@
         <p>Just a little something to remind you how special you are to me.</p>
         
         <h2>Our Favorite Memories 📸</h2>
-        <img src="your-photo-link-here" alt="Us together">
+        <img src="your-image.jpg" alt="Us together">
         
         <h2>Things I Love About You 💕</h2>
         <ul>
@@ -58,14 +63,17 @@
             <li>How you make everything fun</li>
         </ul>
         
-        <button onclick="showMessage()">Click for a Surprise! 🎁</button>
+        <button onclick="showSurprise()">Click for a Surprise! 🎁</button>
         <p class="hidden-message" id="hiddenMessage">Surprise! You are the best thing that ever happened to me. Love you! 😘</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rose_icon.svg/1024px-Rose_icon.svg.png" id="rose" class="rose" alt="A beautiful rose">
     </div>
     
     <script>
-        function showMessage() {
+        function showSurprise() {
             document.getElementById("hiddenMessage").style.display = "block";
+            document.getElementById("rose").style.display = "block";
         }
     </script>
 </body>
 </html>
+
