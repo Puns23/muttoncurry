@@ -3,69 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our 8-Bit World 🌹</title>
+    <title>For My Mutton Curry</title>
     <style>
         body {
+            background-color: pink;
             text-align: center;
-            background-color: #87CEEB;
-        }
-        canvas {
-            background-color: #000;
-            image-rendering: pixelated;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 18px;
-            background: red;
+            font-family: 'Press Start 2P', cursive;
             color: white;
-            border: none;
-            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            gap: 20px;
+        }
+        .character {
+            width: 150px;
+            height: auto;
+        }
+        .rose {
+            width: 80px;
+            height: auto;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Our 8-Bit World! ❤️</h1>
-    <canvas id="gameCanvas" width="400" height="300"></canvas>
-    <br>
-    <button onclick="showRose()">Click for a Surprise! 🌹</button>
-
-    <script>
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-        
-        function drawCharacter(x, y, color) {
-            ctx.fillStyle = color; 
-            ctx.fillRect(x, y, 20, 20); // Head
-            ctx.fillRect(x - 5, y + 20, 30, 30); // Body
-            ctx.fillRect(x - 10, y + 50, 10, 20); // Left leg
-            ctx.fillRect(x + 10, y + 50, 10, 20); // Right leg
-            ctx.fillRect(x - 15, y + 20, 10, 20); // Left arm
-            ctx.fillRect(x + 25, y + 20, 10, 20); // Right arm
-        }
-
-        function drawRose() {
-            // Stem
-            ctx.fillStyle = "green";
-            ctx.fillRect(190, 180, 5, 60);
-            
-            // Leaves
-            ctx.fillRect(180, 200, 10, 5);
-            ctx.fillRect(195, 220, 10, 5);
-
-            // Rose petals
-            ctx.fillStyle = "red";
-            ctx.fillRect(180, 160, 25, 20);
-            ctx.fillRect(185, 150, 15, 10);
-        }
-
-        function showRose() {
-            drawRose();
-        }
-
-        // Draw pixel characters
-        drawCharacter(100, 150, "blue"); // You
-        drawCharacter(250, 150, "pink"); // Your BF
-    </script>
+    <h1>For My Mutton Curry</h1>
+    <div class="container">
+        <img class="character" src="your-character1-url-here" alt="Pixel Boy">
+        <img class="rose" src="https://imgur.com/a/0HXAHOI" alt="Pixel Rose">
+        <img class="character" src="your-character2-url-here" alt="Pixel Girl">
+    </div>
 </body>
 </html>
