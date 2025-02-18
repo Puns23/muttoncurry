@@ -19,16 +19,48 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
         }
-        img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .hidden-message {
-            display: none;
+        .characters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
             margin-top: 20px;
-            font-size: 18px;
-            color: #ff4d4d;
+        }
+        .character {
+            width: 100px;
+            height: 150px;
+            background-color: #ff4d4d;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .head {
+            width: 60px;
+            height: 60px;
+            background-color: #ffcccc;
+            border-radius: 50%;
+        }
+        .rose {
+            display: none;
+            width: 20px;
+            height: 60px;
+            background-color: green;
+            position: relative;
+            margin: 20px auto;
+        }
+        .rose::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: -10px;
         }
         button {
             background-color: #ff4d4d;
@@ -40,40 +72,33 @@
             font-size: 16px;
             margin-top: 15px;
         }
-        .rose {
-            display: none;
-            margin-top: 20px;
-            width: 100px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hey Love ❤️</h1>
-        <p>Just a little something to remind you how special you are to me.</p>
+        <h1>For You, My Love ❤️</h1>
+        <p>Look! It's us in a digital world. Click the button for a surprise! 🌹</p>
         
-        <h2>Our Favorite Memories 📸</h2>
-        <img src="https://imgur.com/a/LxrksxF" alt="Us together">
+        <div class="characters">
+            <div class="character">
+                <div class="head"></div>
+                <p>You</p>
+            </div>
+            <div class="character">
+                <div class="head"></div>
+                <p>Me</p>
+            </div>
+        </div>
         
-        <h2>Things I Love About You 💕</h2>
-        <ul>
-            <li>Your smile that brightens my day</li>
-            <li>Your silly jokes (even the bad ones 😂)</li>
-            <li>The way you always support me</li>
-            <li>How you make everything fun</li>
-        </ul>
+        <div class="rose" id="rose"></div>
         
-        <button onclick="showSurprise()">Click for a Surprise! 🎁</button>
-        <p class="hidden-message" id="hiddenMessage">Surprise! You are the best thing that ever happened to me. Love you! 😘</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rose_icon.svg/1024px-Rose_icon.svg.png" id="rose" class="rose" alt="A beautiful rose">
+        <button onclick="showRose()">Click for a Surprise! 🌹</button>
     </div>
     
     <script>
-        function showSurprise() {
-            document.getElementById("hiddenMessage").style.display = "block";
+        function showRose() {
             document.getElementById("rose").style.display = "block";
         }
     </script>
 </body>
 </html>
-
